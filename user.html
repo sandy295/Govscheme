@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md px-8 py-10 bg-white rounded shadow-lg">
+    <h1 class="text-2xl font-bold text-center mb-6">Create Account</h1>
+
+    <form action="register.php" method="POST" class="space-y-4">
+      <div class="flex flex-col">
+        <label for="name" class="text-sm font-medium mb-2">Full Name</label>
+        <input type="text" name="name" id="name" class="shadow-sm px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50 rounded-md w-full" required>
+      </div>
+
+      <div class="flex items-center mb-4">
+        <label for="gender" class="text-sm font-medium mr-2">Gender:</label>
+        <div class="flex space-x-2">
+          <div class="flex items-center">
+            <input type="radio" id="gender-male" name="gender" value="male" class="w-4 h-4 border-gray-300 rounded-full focus:ring-indigo-500 focus:ring-opacity-50">
+            <label for="gender-male" class="text-sm ml-1">Male</label>
+          </div>
+          <div class="flex items-center">
+            <input type="radio" id="gender-female" name="gender" value="female" class="w-4 h-4 border-gray-300 rounded-full focus:ring-indigo-500 focus:ring-opacity-50">
+            <label for="gender-female" class="text-sm ml-1">Female</label>
+          </div>
+          <div class="flex items-center">
+            <input type="radio" id="gender-other" name="gender" value="other" class="w-4 h-4 border-gray-300 rounded-full focus:ring-indigo-500 focus:ring-opacity-50">
+            <label for="gender-other" class="text-sm ml-1">Other</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <label for="age" class="text-sm font-medium mb-2">Age</label>
+        <input type="number" name="age" id="age" min="18" class="shadow-sm px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50 rounded-md w-full" required>
+      </div>
+
+      <div class="flex flex-col">
+        <label for="profession" class="text-sm font-medium mb-2">Profession</label>
+        <select name="profession" id="profession" class="shadow-sm px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50 rounded-md w-full" required>
+          <option value="">Select Profession</option>
+          <option value="farmer">Farmer</option>
+          <option value="businessman">Businessman</option>
+          <option value="handloom">Handloom Weaver</option>
+          <option value="employee">Employee</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col mb-4">
+        <label for="caste" class="text-sm font-medium mb-2">Caste</label>
+        <select name="caste" id="caste" class="shadow-sm px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50 rounded-md w-full" required>
+            <option value="farmer">General</option>
+            <option value="businessman">BC/MBC</option>
+            <option value="handloom">SC/ST</option>
+        </select>
+        
+      </div>
+      <div class="flex flex-col">
+        <label for="address" class="text-sm font-medium mb-2">Address</label>
+        <textarea name="address" id="address" rows="4" class="shadow-sm px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50 rounded-md w-full" required></textarea>
+      </div>
+      
+      <button type="submit" class="inline-flex items-center px-4 py-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Search  
+      </button>
+      
+    </form>
+  </div>
+</body>
+</html>
